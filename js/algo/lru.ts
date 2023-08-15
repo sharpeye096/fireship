@@ -45,3 +45,24 @@ console.log(lru.getItem('a'));
 console.log(lru.getItem('b'));
 console.log(lru.getItem('c'));
 console.log(lru.getItem('d'));
+
+class A1 {
+    public a2: A2 | undefined;
+}
+
+
+class A2 {
+    public a3: A3 | undefined;
+}
+
+class A3 {
+    public a4: A4 | undefined;
+}
+
+class A4 {
+    public value: number | undefined;
+}
+
+function test(a1: A1) {
+    return a1?.a2?.a3?.a4?.value;
+}
